@@ -1,0 +1,11 @@
+---
+name: "OptaPlanner Jackson"
+metadata:
+  keywords:
+    - "optaplanner"
+    - "jackson"
+    - "json"
+  categories:
+    - "business-automation"
+    - "serialization"
+  status: "stable"

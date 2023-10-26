@@ -1,0 +1,12 @@
+---
+name: "OptaPlanner JSON-B"
+metadata:
+  keywords:
+    - "optaplanner"
+    - "jsonb"
+    - "json-b"
+    - "json"
+  categories:
+    - "business-automation"
+    - "serialization"
+  status: "stable"

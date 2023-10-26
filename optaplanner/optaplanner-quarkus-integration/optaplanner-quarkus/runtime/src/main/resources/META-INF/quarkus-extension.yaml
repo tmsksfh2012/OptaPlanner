@@ -1,0 +1,15 @@
+---
+name: "OptaPlanner"
+metadata:
+  keywords:
+    - "optaplanner"
+    - "constraint-solver"
+    - "artificial-intelligence"
+    - "employee-rostering"
+    - "vehicle-routing-problem"
+    - "maintenance-scheduling"
+    - "timetabling"
+  guide: "https://quarkus.io/guides/optaplanner"
+  categories:
+    - "business-automation"
+  status: "stable"

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<solver xmlns="https://www.optaplanner.org/xsd/solver" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="https://www.optaplanner.org/xsd/solver https://www.optaplanner.org/xsd/solver/solver.xsd">
+    <!-- To slowly prove there are no bugs in this code -->
+    <!--<environmentMode>FULL_ASSERT</environmentMode>-->
+    <!-- To solve faster by saturating multiple CPU cores -->
+    <!--<moveThreadCount>AUTO</moveThreadCount>-->
+
+    <solutionClass>org.optaplanner.examples.statecoloring.domain.Graph</solutionClass>
+<!--    <entityClass>org.optaplanner.examples.statecoloring.domain.Edge</entityClass>-->
+    <entityClass>org.optaplanner.examples.statecoloring.domain.Node</entityClass>
+
+
+    <scoreDirectorFactory>
+        <constraintProviderClass>org.optaplanner.examples.statecoloring.score.StateColoringConstraintProvider</constraintProviderClass>
+        <!--<incrementalScoreCalculatorClass>org.optaplanner.examples.projectjobscheduling.optional.score.ProjectJobSchedulingIncrementalScoreCalculator</incrementalScoreCalculatorClass>-->
+        <initializingScoreTrend>ONLY_DOWN</initializingScoreTrend>
+    </scoreDirectorFactory>
+    <termination>
+        <!--        <minutesSpentLimit>5</minutesSpentLimit>-->
+        <bestScoreLimit>0</bestScoreLimit>
+    </termination>
+
+<!--    <constructionHeuristic>-->
+<!--        <constructionHeuristicType>FIRST_FIT_DECREASING</constructionHeuristicType>-->
+<!--    </constructionHeuristic>-->
+<!--    <localSearch>-->
+<!--        &lt;!&ndash;        <unionMoveSelector>&ndash;&gt;-->
+<!--        <changeMoveSelector>-->
+<!--            &lt;!&ndash;                <valueSelector variableName="executionMode"/>&ndash;&gt;-->
+<!--            <selectionOrder>ORIGINAL</selectionOrder>-->
+<!--        </changeMoveSelector>-->
+<!--        &lt;!&ndash;            <changeMoveSelector>&ndash;&gt;-->
+<!--        &lt;!&ndash;                <valueSelector variableName="delay"/>&ndash;&gt;-->
+<!--        &lt;!&ndash;            </changeMoveSelector>&ndash;&gt;-->
+<!--        &lt;!&ndash;        </unionMoveSelector>&ndash;&gt;-->
+<!--        <acceptor>-->
+<!--            <entityTabuSize>5</entityTabuSize>-->
+<!--            &lt;!&ndash;            <entityTabuRatio>0.2</entityTabuRatio>&ndash;&gt;-->
+<!--            &lt;!&ndash;            <lateAcceptanceSize>500</lateAcceptanceSize>&ndash;&gt;-->
+<!--        </acceptor>-->
+<!--        <forager>-->
+<!--            <acceptedCountLimit>4</acceptedCountLimit>-->
+<!--        </forager>-->
+<!--    </localSearch>-->
+</solver>
